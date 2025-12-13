@@ -1,0 +1,33 @@
+<?php
+
+namespace Miakiwi\Papier\Serializers;
+
+use Miakiwi\Papier\Config;
+use Miakiwi\Papier\Responses\ResponseInterface;
+
+
+
+class JsonSerializer extends AbstractSerializer
+{
+    /**
+     * The MIME type of the serialized data
+     * @var string
+     */
+    protected static string $MIME_TYPE = 'application/json';
+
+
+
+    public static function serialize(ResponseInterface $response, Config $config): string
+    {
+        $data = $response->toArray($config);
+
+        $prettify = $config->prettifyJsonOutput();
+
+        $jsonOptions = JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE;
+        if ($prettify) {
+            $jsonOptions |= JSON_PRETTY_PRINT;
+        }
+
+        return json_encode($data, $jsonOptions);
+    }
+}
