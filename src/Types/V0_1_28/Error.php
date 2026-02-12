@@ -1,9 +1,9 @@
 <?php
 
-namespace Miakiwi\Papier\Types\V0_1_28;
+namespace Miakiwi\Papir\Types\V0_1_28;
 
-use Miakiwi\Papier\Config;
-use Miakiwi\Papier\Traits\HasConfig;
+use Miakiwi\Papir\Config;
+use Miakiwi\Papir\Traits\HasConfig;
 
 
 

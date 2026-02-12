@@ -1,11 +1,11 @@
 <?php
 
-namespace Miakiwi\Papier\Responses\V0_1_28;
+namespace Miakiwi\Papir\Responses\V0_1_28;
 
-use Miakiwi\Papier\Extensions\V0_1_28\ExtensionInterface;
-use Miakiwi\Papier\Types\V0_1_28\Error;
-use Miakiwi\Papier\Types\V0_1_28\Status;
-use Miakiwi\Papier\Responses\ResponseInterface as BaseResponseInterface;
+use Miakiwi\Papir\Extensions\V0_1_28\ExtensionInterface;
+use Miakiwi\Papir\Types\V0_1_28\Error;
+use Miakiwi\Papir\Types\V0_1_28\Status;
+use Miakiwi\Papir\Responses\ResponseInterface as BaseResponseInterface;
 
 
 

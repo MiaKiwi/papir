@@ -1,6 +1,6 @@
 <?php
 
-namespace Miakiwi\Papier;
+namespace Miakiwi\Papir;
 
 
 

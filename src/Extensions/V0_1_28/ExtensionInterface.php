@@ -1,9 +1,9 @@
 <?php
 
-namespace Miakiwi\Papier\Extensions\V0_1_28;
+namespace Miakiwi\Papir\Extensions\V0_1_28;
 
-use Miakiwi\Papier\Config;
-use Miakiwi\Papier\Responses\V0_1_28\ResponseInterface;
+use Miakiwi\Papir\Config;
+use Miakiwi\Papir\Responses\V0_1_28\ResponseInterface;
 
 
 

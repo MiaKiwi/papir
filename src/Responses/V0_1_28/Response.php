@@ -1,14 +1,14 @@
 <?php
 
-namespace Miakiwi\Papier\Responses\V0_1_28;
+namespace Miakiwi\Papir\Responses\V0_1_28;
 
 use DateTimeImmutable;
-use Miakiwi\Papier\Config;
-use Miakiwi\Papier\Extensions\V0_1_28\ExtensionInterface;
-use Miakiwi\Papier\Traits\HasConfig;
-use Miakiwi\Papier\Types\V0_1_28\Error;
-use Miakiwi\Papier\Types\V0_1_28\Status;
-use Miakiwi\Papier\Types\V0_1_28\ResponseDataInterface;
+use Miakiwi\Papir\Config;
+use Miakiwi\Papir\Extensions\V0_1_28\ExtensionInterface;
+use Miakiwi\Papir\Traits\HasConfig;
+use Miakiwi\Papir\Types\V0_1_28\Error;
+use Miakiwi\Papir\Types\V0_1_28\Status;
+use Miakiwi\Papir\Types\V0_1_28\ResponseDataInterface;
 
 
 
@@ -22,7 +22,7 @@ class Response implements ResponseInterface
      * The status of the response
      * @var Status
      */
-    protected Status $status = Status::success();
+    protected Status $status;
 
     /**
      * The version of the response
@@ -68,7 +68,7 @@ class Response implements ResponseInterface
      * @param null|string|bool|int|float|array|ResponseDataInterface $data The data of the response
      * @param string|null $message The message of the response
      * @param Error|null $error The error of the response
-     * @param array $metadata The metadata of the response
+     * @param array|null $metadata The metadata of the response
      * @param array $extensions The extensions of the response
      */
     public function __construct(
@@ -76,11 +76,13 @@ class Response implements ResponseInterface
         null|string|bool|int|float|array|ResponseDataInterface $data = null,
         string|null $message = null,
         Error|null $error = null,
-        array $metadata = [],
+        ?array $metadata = null,
         array $extensions = []
     ) {
         if ($status !== null) {
             $this->setStatus($status);
+        } else {
+            $this->setStatus(Status::success());
         }
 
         if ($data !== null) {
@@ -89,7 +91,7 @@ class Response implements ResponseInterface
 
         $this->message = $message;
         $this->error = $error;
-        $this->setMetadata($metadata);
+        $this->setMetadata($metadata ?? []);
         $this->setExtensions($extensions);
     }
 
@@ -180,7 +182,7 @@ class Response implements ResponseInterface
             }
         }
 
-        if (array_is_list($metadata)) {
+        if ($metadata !== [] && array_is_list($metadata)) {
             throw new \InvalidArgumentException('Metadata must be an associative array.');
         }
 
@@ -294,6 +296,10 @@ class Response implements ResponseInterface
 
     public function setError(Error|null $error): void
     {
+        if ($this->getStatus() !== Status::ERROR) {
+            $this->setStatus(Status::error());
+        }
+
         $this->error = $error;
     }
 

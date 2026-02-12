@@ -1,8 +1,8 @@
 <?php
 
-namespace Miakiwi\Papier\Responses;
+namespace Miakiwi\Papir\Responses;
 
-use Miakiwi\Papier\Config;
+use Miakiwi\Papir\Config;
 
 
 

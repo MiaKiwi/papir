@@ -10,7 +10,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Miakiwi\\Papier\\": "src/",
+            "Miakiwi\\Papir\\": "src/",
             "": "src/",
             "Miakiwi\\Papir\\Tests\\": "tests/"
         }

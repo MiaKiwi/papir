@@ -1,9 +1,9 @@
 <?php
 
-namespace Miakiwi\Papier\Serializers;
+namespace Miakiwi\Papir\Serializers;
 
-use Miakiwi\Papier\Config;
-use Miakiwi\Papier\Responses\ResponseInterface;
+use Miakiwi\Papir\Config;
+use Miakiwi\Papir\Responses\ResponseInterface;
 
 
 

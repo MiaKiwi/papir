@@ -1,10 +1,10 @@
 <?php
 
-namespace Miakiwi\Papier\Tests\V0_1_28;
+namespace Miakiwi\Papir\Tests\V0_1_28;
 
-use Miakiwi\Papier\Config;
-use Miakiwi\Papier\Types\V0_1_28\Error;
-use Miakiwi\Papier\Types\V0_1_28\SubError;
+use Miakiwi\Papir\Config;
+use Miakiwi\Papir\Types\V0_1_28\Error;
+use Miakiwi\Papir\Types\V0_1_28\SubError;
 use PHPUnit\Framework\TestCase;
 
 

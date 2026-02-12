@@ -1,8 +1,8 @@
 <?php
 
-namespace Miakiwi\Papier\Traits;
+namespace Miakiwi\Papir\Traits;
 
-use Miakiwi\Papier\Config;
+use Miakiwi\Papir\Config;
 
 
 

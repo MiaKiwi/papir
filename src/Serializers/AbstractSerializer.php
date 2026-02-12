@@ -1,6 +1,6 @@
 <?php
 
-namespace Miakiwi\Papier\Serializers;
+namespace Miakiwi\Papir\Serializers;
 
 
 
