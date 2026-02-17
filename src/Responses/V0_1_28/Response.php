@@ -314,7 +314,7 @@ class Response implements ResponseInterface
 
     public function isValid(?Config $config = null): bool
     {
-        if ($config === null) {
+        if ($config == null) {
             $config = $this->getConfig();
         }
 
