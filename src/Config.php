@@ -43,10 +43,10 @@ class Config
     protected bool $throwExceptionOnDuplicateSubErrors = false;
 
     /**
-     * Whether to prettify JSON output
+     * Whether to prettify serializer output
      * @var bool
      */
-    protected bool $prettifyJsonOutput = false;
+    protected bool $prettifySerializerOutput = false;
 
 
 
@@ -70,7 +70,7 @@ class Config
         $this->setIncludeResponseTimeInMetadata($options['includeResponseTimeInMetadata'] ?? true);
         $this->setIncludeOmissibleMembers($options['includeOmissibleMembers'] ?? true);
         $this->setThrowExceptionOnDuplicateSubErrors($options['throwExceptionOnDuplicateSubErrors'] ?? false);
-        $this->setPrettifyJsonOutput($options['prettifyJsonOutput'] ?? false);
+        $this->setprettifySerializerOutput($options['prettifySerializerOutput'] ?? false);
     }
 
 
@@ -154,14 +154,14 @@ class Config
 
 
 
-    public function setPrettifyJsonOutput(bool $prettify): void
+    public function setprettifySerializerOutput(bool $prettify): void
     {
-        $this->prettifyJsonOutput = $prettify;
+        $this->prettifySerializerOutput = $prettify;
     }
 
-    public function prettifyJsonOutput(): bool
+    public function prettifySerializerOutput(): bool
     {
-        return $this->prettifyJsonOutput;
+        return $this->prettifySerializerOutput;
     }
 
 

@@ -17,11 +17,15 @@ class JsonSerializer extends AbstractSerializer
 
 
 
-    public static function serialize(ResponseInterface $response, Config $config): string
+    public static function serialize(ResponseInterface $response, ?Config $config = null): string
     {
+        if ($config === null) {
+            $config = Config::getDefault();
+        }
+
         $data = $response->toArray($config);
 
-        $prettify = $config->prettifyJsonOutput();
+        $prettify = $config->prettifySerializerOutput();
 
         $jsonOptions = JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE;
         if ($prettify) {

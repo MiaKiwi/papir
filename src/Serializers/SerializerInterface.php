@@ -20,8 +20,8 @@ interface SerializerInterface
     /**
      * Serializes the response
      * @param ResponseInterface $response The response instance
-     * @param Config $config The configuration instance
+     * @param Config|null $config The configuration instance
      * @return string The serialized response
      */
-    public static function serialize(ResponseInterface $response, Config $config): string;
+    public static function serialize(ResponseInterface $response, ?Config $config = null): string;
 }

@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [STVP](https://mia.kiwi/projects/stvp).
 
+## [26.0.3] - 2026-02-17
+
+### Changed
+
+- v0.1.28 Config no longer mandatory for serializers
+- Renamed 'prettifyJsonOutput' to 'prettifySerializerOutput' to be more generic
+
+
+
 ## [26.0.2] - 2026-02-17
 
 ### Added
