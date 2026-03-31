@@ -96,7 +96,7 @@ class Status implements TypeInterface
 
     public function isValid(?Config $config = null): bool
     {
-        if ($config === null) {
+        if ($config == null) {
             $config = $this->getConfig();
         }
 
@@ -114,7 +114,7 @@ class Status implements TypeInterface
 
     public function toPHPValue(?Config $config = null): string
     {
-        if ($config === null) {
+        if ($config == null) {
             $config = $this->getConfig();
         }
 

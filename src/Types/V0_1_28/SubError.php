@@ -76,7 +76,7 @@ class SubError implements TypeInterface
 
     public function isValid(?Config $config = null): bool
     {
-        if ($config === null) {
+        if ($config == null) {
             $config = $this->getConfig();
         }
 
@@ -114,7 +114,7 @@ class SubError implements TypeInterface
 
     public function toPHPValue(?Config $config = null): array
     {
-        if ($config === null) {
+        if ($config == null) {
             $config = $this->getConfig();
         }
 
